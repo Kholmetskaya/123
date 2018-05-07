@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA2NT7zgNRF9Kzv3OOUwJjw72JNl2S5Egs",
+        authDomain: "myexample-80e88.firebaseapp.com",
+        databaseURL: "https://myexample-80e88.firebaseio.com",
+        projectId: "myexample-80e88",
+        storageBucket: "myexample-80e88.appspot.com",
+        messagingSenderId: "216354619274"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="js/index.js" defer></script>
+    <title>Unicorn-chat</title>
+</head>
+<body>
+    <header class = 'wrapper'>
+        <h1 class="logo">Unicorn</h1>
+        <nav>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Schedule</a></li>
+                <li><a href="">Photo</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+  
+    <section class="form wrapper">
+        <div id="user_name">Hi, noname</div>
+        <p id="errors"></p>
+    
+        <div class="registration">
+            <form action="#" class="register" >
+                <fieldset>
+                    <legend>Зарегистрироваться</legend>
+                    <input type="text" placeholder="name" id="register_name">
+                    <input type="email" placeholder="email" id="register_login">
+                    <input type="password"  placeholder="password" id="register_password">
+                    <input type="password" placeholder="password confirmation" id="password_confirmation" >
+                    <button type="submit" id="register">Регистрация</button>
+                </fieldset>
+            </form>
+        </div>
+    
+        <div class="logins">
+            <form action="#" class="login">
+                <fieldset>
+                    <legend>Войти</legend>
+                    <input type="email" placeholder="login" id="auth_login">
+                    <input type="password" placeholder="password" id="auth_password">
+                    <button type="submit" id="auth">Войти</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <section class="content wrapper">
+        <div class="sidebar">
+            <button id="burger">
+                <span class=burger-menu></span>
+            </button>
+            <ul class="sidebar_menu">
+                <li>Avatar</li>
+                <li>Color</li>
+                <li>Friends</li>
+                <li>Dialogs</li>
+            </ul>
+        </div>
+        <div class="message_left">
+            <img src="img/1.jpg" alt="#">
+            <textarea id = "msg" rows='5'  placeholder = "Введите сообщение" ></textarea>
+            <button class="send-btn">Send</button>
+        </div>
+        <!-- <div class="message-right">
+            <img src="img/2.jpg" alt="#">
+            <textarea rows='5' placeholder = "Введите сообщение" ></textarea>
+            <button class="send-btn">Send</button> -->
+        <!-- </div>
+        <div class="message-left">
+            <img src="img/3.jpg" alt="#">
+            <textarea rows='5' placeholder = "Введите сообщение" ></textarea> 
+            <button class="send-btn">Send</button>
+        </div>
+        <div class="message-right">
+            <img src="img/4.jpg" alt="#">
+            <textarea rows='5' placeholder = "Введите сообщение" ></textarea>
+            <button class="send-btn">Send</button>
+   </div> -->
+    </section>
+    <footer class = 'wrapper'>
+        <h3>Unicorn-chat</h3>
+        <ul>
+            <li>Mail: Unicorn_@i.ua</li>
+            <li>Phone: 555-55-55</li>
+            <li>Mobile: +38(050)-280-17-04</li>
+        </ul>
+    </footer>    
+</body>
+</html>
